@@ -1,0 +1,7 @@
+{
+  "name": "Becas-App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
