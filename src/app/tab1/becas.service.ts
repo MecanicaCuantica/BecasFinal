@@ -24,7 +24,16 @@ export class BecasService {
       pais: 'Canada',
       universidad: 'Ottawa',
       requerimientos: ['Vivir en Canada', 'Hablar "canadience" xD']
-    }
+    },
+    {
+      id: '3',
+      categoria: 'Internacional',
+      nombre: 'Viejos',
+      porcentajeFinancia: '40',
+      pais: 'Polombia',
+      universidad: 'Valle',
+      requerimientos: ['Estar matriculado', 'Promedio superior a 3.5']
+    },
   ]
 
   constructor() { }
@@ -33,7 +42,13 @@ export class BecasService {
     return [...this.becas]
   }
 
-  consultarBeca() {}
+  consultarBeca(becaId: string) {
+    return{
+      ...this.becas.find(beca =>{
+        return beca.id === becaId
+      })
+    }
+  }
 
   agregarBeca(categoria: string, nombre: string, porcentajeFinancia: string, pais: string, universidad: string/*, requerimientos: string[]*/) {
     this.becas.push({
@@ -47,5 +62,9 @@ export class BecasService {
     });
   }
 
-  eliminar() {}
+  eliminarBeca(becaId: string) {
+    this.becas = this.becas.filter(beca =>{
+      return beca.id !== becaId
+    })
+  }
 }

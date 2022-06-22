@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let beca of becas">
+    <ion-item *ngFor="let beca of becas" [routerLink]="['/consultar', beca.id]">
       {{beca.nombre}}
     </ion-item>
   </ion-list>

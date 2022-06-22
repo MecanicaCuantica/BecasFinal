@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{beca.nombre}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="eliminarBeca()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-list>
+    <ion-row>
+      <ion-col>
+        Nombre beca: {{beca.nombre}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Categoria: {{beca.categoria}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Porcentaje financiacion: {{beca.porcentajeFinancia}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Pais: {{beca.pais}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Universidad: {{beca.universidad}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list *ngIf="beca.requerimientos && beca.requerimientos.length > 0; else noComments">
+          Requerimientos: 
+          <ion-item *ngFor="let requerimientos of beca.requerimientos">
+            {{requerimientos}}
+          </ion-item>
+        </ion-list>
+        <ng-template #noComments>
+          <ion-text>
+            <p>Requerimientos: sin requerimientos</p>
+          </ion-text>
+        </ng-template>
+      </ion-col>
+    </ion-row>
+    </ion-list>
+  </ion-grid>
+</ion-content>
