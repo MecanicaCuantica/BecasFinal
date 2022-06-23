@@ -24,4 +24,8 @@ export class Tab1Page implements OnInit{
   agregarBeca(){
     this.router.navigate(['/tabs/tab1/agregar']);
   }
+
+  salir(){
+    this.router.navigate(['/login']);
+  }
 }

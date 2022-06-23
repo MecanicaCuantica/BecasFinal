@@ -4,7 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    //loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     children:[
       {
         path:"",
@@ -19,7 +23,16 @@ const routes: Routes = [
   {
     path: 'consultar',
     loadChildren: () => import('./consultar/consultar.module').then( m => m.ConsultarPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   }
+
 
 
 ];
