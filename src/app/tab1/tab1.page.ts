@@ -14,11 +14,11 @@ export class Tab1Page implements OnInit{
   constructor(private becaService: BecasService, private router: Router) {}
 
   ngOnInit() {
-    this.becas = this.becaService.consultarBecas();
+    this.becas = this.becaService.consultarBecas()
   }
 
   ionViewWillEnter(){
-    this.becas = this.becaService.consultarBecas();
+   this.becas = this.becaService.consultarBecas();
   }
 
   agregarBeca(){
