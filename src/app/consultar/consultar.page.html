@@ -42,17 +42,14 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-list *ngIf="beca.requerimientos && beca.requerimientos.length > 0; else noComments">
-          Requerimientos: 
-          <ion-item *ngFor="let requerimientos of beca.requerimientos">
-            {{requerimientos}}
-          </ion-item>
-        </ion-list>
-        <ng-template #noComments>
-          <ion-text>
-            <p>Requerimientos: sin requerimientos</p>
-          </ion-text>
-        </ng-template>
+        Requerimientos: {{beca.requerimientos}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/tabs/tab1/editar', beca.id]">
+          Actualizar
+        </ion-button>
       </ion-col>
     </ion-row>
     </ion-list>

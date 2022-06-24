@@ -10,7 +10,12 @@ const routes: Routes = [
   {
     path: 'agregar',
     loadChildren: () => import('./agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
+  {
+    path: 'editar/:becaId',
+    loadChildren: () => import('./editar/editar.module').then( m => m.EditarPageModule)
   }
+
 
 ];
 

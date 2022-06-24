@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tab1"></ion-back-button>
     </ion-buttons>
-    <ion-title>AGREGAR BECA</ion-title>
+    <ion-title>ACTUALIZAR BECA</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,8 +18,8 @@
           <ion-input type="text" placeholder="Ingrese un Pais" #pais></ion-input>
           <ion-input type="text" placeholder="Ingrese una Universidad" #universidad></ion-input>
           <ion-input type="text" placeholder="Ingrese uno o varios Requerimientos" #requerimientos></ion-input>
-          <ion-button (click)="guardarBeca(categoria, nombre, porcentaje, pais, universidad, requerimientos)">
-            Guardar
+          <ion-button (click)="actualizarBeca(categoria, nombre, porcentaje, pais, universidad, requerimientos)">
+            Editar
           </ion-button>
         </ion-card-content>
       </ion-card>

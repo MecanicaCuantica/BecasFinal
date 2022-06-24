@@ -14,7 +14,7 @@ export class BecasService {
       porcentajeFinancia: '50',
       pais: 'Colombia',
       universidad: 'Valle',
-      requerimientos: ['Estar matriculado', 'Promedio superior a 3.5']
+      requerimientos: 'Estar matriculado, Promedio superior a 3.5'
     },
     {
       id: '2',
@@ -23,7 +23,7 @@ export class BecasService {
       porcentajeFinancia: '30',
       pais: 'Canada',
       universidad: 'Ottawa',
-      requerimientos: ['Vivir en Canada', 'Hablar "canadience" xD']
+      requerimientos: 'Vivir en Canada, Hablar "canadience" xD'
     },
     {
       id: '3',
@@ -32,7 +32,7 @@ export class BecasService {
       porcentajeFinancia: '40',
       pais: 'Polombia',
       universidad: 'Valle',
-      requerimientos: ['Estar matriculado', 'Promedio superior a 3.5']
+      requerimientos: 'Estar matriculado, Promedio superior a 3.5'
     },
   ]
 
@@ -50,7 +50,7 @@ export class BecasService {
     }
   }
 
-  agregarBeca(categoria: string, nombre: string, porcentajeFinancia: string, pais: string, universidad: string/*, requerimientos: string[]*/) {
+  agregarBeca(categoria: string, nombre: string, porcentajeFinancia: string, pais: string, universidad: string, requerimientos: string) {
     this.becas.push({
       id: this.becas.length + 1 + "",
       categoria,
@@ -58,8 +58,22 @@ export class BecasService {
       porcentajeFinancia,
       pais,
       universidad,
-      requerimientos: []
+      requerimientos
     });
+  }
+
+  editarBeca(id: string, categoria: string, nombre: string, porcentajeFinancia: string, pais: string, universidad: string, requerimientos: string){
+    this.eliminarBeca(id)
+
+    this.becas.push({
+      id,
+      categoria,
+      nombre,
+      porcentajeFinancia,
+      pais,
+      universidad,
+      requerimientos
+    })
   }
 
   eliminarBeca(becaId: string) {

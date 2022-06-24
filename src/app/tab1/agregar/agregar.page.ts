@@ -14,8 +14,8 @@ export class AgregarPage implements OnInit {
   ngOnInit() {
   }
 
-  guardarBeca(categoria: HTMLInputElement, nombre: HTMLInputElement, porcentaje: HTMLInputElement, pais: HTMLInputElement, universidad: HTMLInputElement/*, requerimientos*/){
-    this.becaService.agregarBeca(categoria.value, nombre.value, porcentaje.value, pais.value, universidad.value/*, requerimientos.value*/);
+  guardarBeca(categoria: HTMLInputElement, nombre: HTMLInputElement, porcentaje: HTMLInputElement, pais: HTMLInputElement, universidad: HTMLInputElement, requerimientos: HTMLInputElement){
+    this.becaService.agregarBeca(categoria.value, nombre.value, porcentaje.value, pais.value, universidad.value, requerimientos.value);
     this.router.navigate(['/tabs/tab1']);
     //console.log(categoria.value, nombre.value, porcentaje.value, pais.value, universidad.value, requerimientos.value)
   }
