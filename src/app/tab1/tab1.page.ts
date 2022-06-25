@@ -11,7 +11,18 @@ export class Tab1Page implements OnInit{
   
   becas = []
 
-  constructor(private becaService: BecasService, private router: Router) {}
+  constructor(public becaService: BecasService, private router: Router) {}
+
+  Sumar(becaId:string){
+    
+    var pos;
+    pos = this.becaService.becas.map(function(e) { return e.id; }).indexOf(becaId);
+    var aux = this.becaService.becas[pos]
+    console.log(aux)
+    aux.populariad = (parseInt(aux.populariad)+1).toString();
+    this.becaService.becas[pos] = aux;
+    console.log( this.becaService.becas[pos])
+  }
 
   ngOnInit() {
     this.becas = this.becaService.consultarBecas()

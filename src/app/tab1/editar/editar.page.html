@@ -18,7 +18,8 @@
           <ion-input type="text" placeholder="Ingrese un Pais" #pais></ion-input>
           <ion-input type="text" placeholder="Ingrese una Universidad" #universidad></ion-input>
           <ion-input type="text" placeholder="Ingrese uno o varios Requerimientos" #requerimientos></ion-input>
-          <ion-button (click)="actualizarBeca(categoria, nombre, porcentaje, pais, universidad, requerimientos)">
+          <ion-input type="text" placeholder="Popularidad" #popularidad></ion-input>
+          <ion-button (click)="actualizarBeca(categoria, nombre, porcentaje, pais, universidad, requerimientos,popularidad)">
             Editar
           </ion-button>
         </ion-card-content>

@@ -5,5 +5,6 @@ export interface Beca {
     porcentajeFinancia: String;
     pais: String;
     universidad: String;
-    requerimientos: String
+    requerimientos: String;
+    populariad: string;
 }

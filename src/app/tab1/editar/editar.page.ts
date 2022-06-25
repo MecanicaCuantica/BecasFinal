@@ -22,8 +22,8 @@ export class EditarPage implements OnInit {
     })
   }
 
-  actualizarBeca(categoria: HTMLInputElement, nombre: HTMLInputElement, porcentaje: HTMLInputElement, pais: HTMLInputElement, universidad: HTMLInputElement, requerimientos: HTMLInputElement){
-    this.becaService.editarBeca(this.beca.id, categoria.value, nombre.value, porcentaje.value, pais.value, universidad.value, requerimientos.value)
+  actualizarBeca(categoria: HTMLInputElement, nombre: HTMLInputElement, porcentaje: HTMLInputElement, pais: HTMLInputElement, universidad: HTMLInputElement, requerimientos: HTMLInputElement,populariad: HTMLInputElement){
+    this.becaService.editarBeca(this.beca.id, categoria.value, nombre.value, porcentaje.value, pais.value, universidad.value, requerimientos.value.toString(),populariad.value)
     this.router.navigate(['/tabs/tab1'])
   }
 }
